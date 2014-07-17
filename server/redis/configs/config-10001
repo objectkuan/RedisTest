@@ -1,0 +1,42 @@
+daemonize yes 
+# port 6379
+# appendonly yes
+# appendfilename appendonly6379.aof
+# appendfsync everysec
+# dbfilename r6379.rdb
+timeout 1234567
+logfile /dev/null
+databases 16
+rdbcompression yes
+slave-serve-stale-data yes
+no-appendfsync-on-rewrite yes
+auto-aof-rewrite-percentage 0
+auto-aof-rewrite-min-size 67108864
+slowlog-log-slower-than 50000
+slowlog-max-len 1024
+vm-enabled no
+hash-max-zipmap-entries 512
+hash-max-zipmap-value 64
+list-max-ziplist-entries 512
+list-max-ziplist-value 64
+set-max-intset-entries 512
+zset-max-ziplist-entries 128
+zset-max-ziplist-value 64
+activerehashing yes
+maxmemory 0
+max-open-files 204800
+save-lua-command-to-aof no
+remove-unused-aof-after-bgsave no
+add-timestamp no 
+pidfile redis.pid
+loglevel notice
+dir ./appendonly
+maxmemory-policy volatile-lru
+cronbgrewrite 0 2 * * *
+cronsave 0 1 * * *
+libredis ./libredis.so.2.4.20.3
+appendfsync everysec
+appendfilename appendonly.aof
+appendonly yes
+port 10001
+dbfilename r10001.rdb
