@@ -1,247 +1,0 @@
-2014-07-17 16:56:11
-Redis instance amount: 8
-Parallel client amount: 250
-
-
-GET: -nanGET: 8200.00GET: 8354.00GET: 8270.67GET: 8101.00GET: 8103.20GET: 8129.33GET: 8133.14GET: 8140.50GET: 8128.44GET: 8148.80GET: 8114.55GET: 8081.64GET: 8074.44GET: 8090.55GET: 8099.17GET: 8104.72GET: 8084.69GET: 8072.43GET: 8058.72GET: 8061.79GET: 8048.18GET: 8047.63GET: 8035.64GET: 8019.33GET: 8009.60GET: 8008.15GET: 8008.59GET: 8013.14GET: 7995.45GET: 7991.34GET: 7981.17GET: 7981.38GET: 7981.82GET: 7983.42GET: 7980.69GET: 7978.34GET: 7971.79GET: 7975.06GET: 7970.26GET: 7980.30GET: 7979.42GET: 7986.00GET: 7976.28GET: 7989.91GET: 7992.45GET: 7999.48GET: 8011.06GET: 8008.58GET: 8009.71====== GET ======
-  100000 requests completed in 12.47 seconds
-  25 parallel clients
-  3 bytes payload
-  keep alive: 1
-
-0.00% <= 1 milliseconds
-1.14% <= 2 milliseconds
-49.57% <= 3 milliseconds
-93.79% <= 4 milliseconds
-99.72% <= 5 milliseconds
-99.88% <= 6 milliseconds
-99.92% <= 7 milliseconds
-99.93% <= 8 milliseconds
-99.94% <= 9 milliseconds
-99.96% <= 10 milliseconds
-99.97% <= 11 milliseconds
-99.98% <= 12 milliseconds
-99.98% <= 13 milliseconds
-99.98% <= 14 milliseconds
-99.98% <= 15 milliseconds
-99.99% <= 16 milliseconds
-99.99% <= 17 milliseconds
-99.99% <= 18 milliseconds
-99.99% <= 19 milliseconds
-99.99% <= 20 milliseconds
-99.99% <= 21 milliseconds
-100.00% <= 22 milliseconds
-100.00% <= 23 milliseconds
-100.00% <= 23 milliseconds
-8019.89 requests per second
-
-GET: 875.00GET: 7170.54GET: 7521.65GET: 7489.45GET: 7559.52GET: 7616.85GET: 7586.87GET: 7571.10GET: 7565.24GET: 7553.14GET: 7593.70GET: 7594.63GET: 7630.32GET: 7621.85GET: 7625.14GET: 7636.24GET: 7633.08GET: 7633.95GET: 7623.20GET: 7622.82GET: 7620.48GET: 7633.39GET: 7634.24GET: 7637.09GET: 7648.69GET: 7647.39GET: 7653.10GET: 7649.65GET: 7651.73GET: 7650.50GET: 7652.55GET: 7660.52GET: 7668.00GET: 7679.62GET: 7688.57GET: 7688.78GET: 7690.31GET: 7694.57GET: 7688.51GET: 7695.97GET: 7704.67GET: 7725.61GET: 7743.36GET: 7737.71GET: 7751.20GET: 7759.93GET: 7765.49GET: 7778.38GET: 7793.99GET: 7791.91GET: 7790.31GET: 7786.58====== GET ======
-  100000 requests completed in 12.84 seconds
-  25 parallel clients
-  3 bytes payload
-  keep alive: 1
-
-0.00% <= 1 milliseconds
-1.12% <= 2 milliseconds
-40.66% <= 3 milliseconds
-92.59% <= 4 milliseconds
-99.13% <= 5 milliseconds
-99.77% <= 6 milliseconds
-99.87% <= 7 milliseconds
-99.90% <= 8 milliseconds
-99.93% <= 9 milliseconds
-99.95% <= 10 milliseconds
-99.95% <= 11 milliseconds
-99.96% <= 12 milliseconds
-99.96% <= 13 milliseconds
-99.96% <= 14 milliseconds
-99.98% <= 15 milliseconds
-99.98% <= 16 milliseconds
-99.99% <= 18 milliseconds
-99.99% <= 19 milliseconds
-99.99% <= 20 milliseconds
-99.99% <= 21 milliseconds
-99.99% <= 22 milliseconds
-99.99% <= 23 milliseconds
-100.00% <= 25 milliseconds
-100.00% <= 26 milliseconds
-100.00% <= 28 milliseconds
-100.00% <= 30 milliseconds
-100.00% <= 30 milliseconds
-7786.34 requests per second
-
-GET: 6617.02GET: 7601.02GET: 7780.03GET: 7696.97GET: 7802.80GET: 7833.21GET: 7862.28GET: 7899.52GET: 7882.77GET: 7862.82GET: 7845.51GET: 7858.87GET: 7846.55GET: 7857.27GET: 7829.99GET: 7833.25GET: 7836.55GET: 7824.68GET: 7826.37GET: 7829.72GET: 7820.50GET: 7813.61GET: 7808.40GET: 7799.39GET: 7788.67GET: 7820.87GET: 7820.99GET: 7830.09GET: 7831.28GET: 7846.19GET: 7872.68GET: 7893.44GET: 7899.53GET: 7897.04GET: 7891.46GET: 7893.39GET: 7897.40GET: 7913.65GET: 7926.26GET: 7937.73GET: 7935.42GET: 7943.23GET: 7945.97GET: 7942.34GET: 7946.42GET: 7961.90GET: 7962.46GET: 7972.92GET: 7983.36GET: 8001.29====== GET ======
-  100000 requests completed in 12.49 seconds
-  25 parallel clients
-  3 bytes payload
-  keep alive: 1
-
-0.00% <= 1 milliseconds
-1.40% <= 2 milliseconds
-49.25% <= 3 milliseconds
-92.45% <= 4 milliseconds
-99.50% <= 5 milliseconds
-99.87% <= 6 milliseconds
-99.90% <= 7 milliseconds
-99.92% <= 8 milliseconds
-99.97% <= 9 milliseconds
-99.98% <= 10 milliseconds
-99.98% <= 11 milliseconds
-99.98% <= 12 milliseconds
-99.99% <= 13 milliseconds
-99.99% <= 14 milliseconds
-99.99% <= 16 milliseconds
-99.99% <= 17 milliseconds
-99.99% <= 18 milliseconds
-99.99% <= 19 milliseconds
-99.99% <= 21 milliseconds
-99.99% <= 22 milliseconds
-99.99% <= 23 milliseconds
-99.99% <= 25 milliseconds
-100.00% <= 26 milliseconds
-100.00% <= 27 milliseconds
-100.00% <= 28 milliseconds
-100.00% <= 29 milliseconds
-100.00% <= 31 milliseconds
-100.00% <= 32 milliseconds
-8003.20 requests per second
-
-GET: 6788.62GET: 7780.16GET: 7865.17GET: 7925.54GET: 8000.89GET: 8018.21GET: 8088.72GET: 8114.79GET: 8098.92GET: 8097.35GET: 8126.57GET: 8130.18GET: 8138.97GET: 8190.04GET: 8188.24GET: 8224.63GET: 8222.41GET: 8211.53GET: 8203.33GET: 8237.43GET: 8257.86GET: 8242.69GET: 8251.64GET: 8244.85GET: 8251.31GET: 8231.25GET: 8229.32GET: 8225.78GET: 8216.87GET: 8198.54GET: 8199.89GET: 8169.16GET: 8140.94GET: 8128.97GET: 8107.84GET: 8086.43GET: 8079.35GET: 8077.88GET: 8056.32GET: 8029.57GET: 8006.62GET: 7990.26GET: 7975.62GET: 7955.12GET: 7940.40GET: 7928.70GET: 7914.83GET: 7905.00GET: 7890.22GET: 7892.03GET: 7889.26====== GET ======
-  100000 requests completed in 12.67 seconds
-  25 parallel clients
-  3 bytes payload
-  keep alive: 1
-
-0.00% <= 1 milliseconds
-0.82% <= 2 milliseconds
-51.26% <= 3 milliseconds
-86.10% <= 4 milliseconds
-99.64% <= 5 milliseconds
-99.92% <= 6 milliseconds
-99.95% <= 7 milliseconds
-99.95% <= 8 milliseconds
-99.97% <= 9 milliseconds
-99.98% <= 10 milliseconds
-99.98% <= 11 milliseconds
-99.98% <= 12 milliseconds
-99.99% <= 13 milliseconds
-99.99% <= 15 milliseconds
-99.99% <= 16 milliseconds
-99.99% <= 17 milliseconds
-99.99% <= 18 milliseconds
-99.99% <= 19 milliseconds
-99.99% <= 20 milliseconds
-99.99% <= 22 milliseconds
-99.99% <= 23 milliseconds
-99.99% <= 24 milliseconds
-100.00% <= 26 milliseconds
-100.00% <= 27 milliseconds
-100.00% <= 29 milliseconds
-100.00% <= 30 milliseconds
-100.00% <= 31 milliseconds
-7890.79 requests per second
-
-GET: 6057.47GET: 6481.13GET: 6679.52GET: 6785.95GET: 6805.11GET: 6848.42GET: 6884.78GET: 6894.03GET: 6920.46GET: 6934.85GET: 6952.90GET: 7006.50GET: 7014.80GET: 7028.91GET: 7047.89GET: 7084.84GET: 7137.25GET: 7218.08GET: 7267.38GET: 7343.55GET: 7384.15GET: 7416.96GET: 7447.05GET: 7461.43GET: 7474.49GET: 7487.78GET: 7514.61GET: 7522.89GET: 7533.80GET: 7539.66GET: 7551.40GET: 7570.22GET: 7579.69GET: 7587.06GET: 7591.01GET: 7615.57GET: 7621.69GET: 7627.90GET: 7654.68GET: 7670.23GET: 7688.65GET: 7718.46GET: 7735.08GET: 7750.30GET: 7760.89GET: 7779.61GET: 7786.04GET: 7795.47GET: 7818.64GET: 7835.27GET: 7847.11====== GET ======
-  100000 requests completed in 12.74 seconds
-  25 parallel clients
-  3 bytes payload
-  keep alive: 1
-
-0.00% <= 1 milliseconds
-1.53% <= 2 milliseconds
-50.82% <= 3 milliseconds
-85.26% <= 4 milliseconds
-99.32% <= 5 milliseconds
-99.83% <= 6 milliseconds
-99.88% <= 7 milliseconds
-99.93% <= 8 milliseconds
-99.96% <= 9 milliseconds
-99.98% <= 10 milliseconds
-99.98% <= 11 milliseconds
-99.98% <= 12 milliseconds
-99.98% <= 13 milliseconds
-99.99% <= 15 milliseconds
-99.99% <= 17 milliseconds
-99.99% <= 18 milliseconds
-99.99% <= 19 milliseconds
-99.99% <= 20 milliseconds
-99.99% <= 22 milliseconds
-99.99% <= 23 milliseconds
-99.99% <= 24 milliseconds
-99.99% <= 26 milliseconds
-99.99% <= 27 milliseconds
-100.00% <= 28 milliseconds
-100.00% <= 29 milliseconds
-100.00% <= 30 milliseconds
-100.00% <= 31 milliseconds
-100.00% <= 32 milliseconds
-7848.68 requests per second
-
-GET: 7253.09GET: 7834.95GET: 7981.87GET: 8121.71GET: 8277.97GET: 8296.03GET: 8320.10GET: 8326.36GET: 8301.11GET: 8354.89GET: 8376.03GET: 8360.23GET: 8359.27GET: 8346.72GET: 8354.45GET: 8378.83GET: 8376.02GET: 8383.73GET: 8401.33GET: 8400.24GET: 8417.59GET: 8435.99GET: 8431.04GET: 8420.60GET: 8433.07GET: 8415.56GET: 8468.11GET: 8508.46GET: 8542.23GET: 8544.18GET: 8548.09GET: 8558.95GET: 8570.13GET: 8583.62GET: 8582.48GET: 8586.67GET: 8586.05GET: 8584.62GET: 8578.08GET: 8562.70GET: 8571.68GET: 8563.62GET: 8555.00GET: 8565.29GET: 8566.42GET: 8569.96====== GET ======
-  100000 requests completed in 11.65 seconds
-  25 parallel clients
-  3 bytes payload
-  keep alive: 1
-
-0.00% <= 1 milliseconds
-3.06% <= 2 milliseconds
-62.58% <= 3 milliseconds
-96.06% <= 4 milliseconds
-99.71% <= 5 milliseconds
-99.89% <= 6 milliseconds
-99.92% <= 7 milliseconds
-99.93% <= 8 milliseconds
-99.96% <= 9 milliseconds
-99.97% <= 10 milliseconds
-99.98% <= 11 milliseconds
-99.99% <= 13 milliseconds
-99.99% <= 14 milliseconds
-99.99% <= 15 milliseconds
-99.99% <= 16 milliseconds
-99.99% <= 17 milliseconds
-99.99% <= 18 milliseconds
-99.99% <= 19 milliseconds
-99.99% <= 20 milliseconds
-99.99% <= 21 milliseconds
-100.00% <= 22 milliseconds
-100.00% <= 24 milliseconds
-100.00% <= 26 milliseconds
-100.00% <= 27 milliseconds
-8580.01 requests per second
-
-GET: -nanGET: 7480.00GET: 7886.00GET: 8234.67GET: 8408.00GET: 8450.04GET: 8418.39GET: 8390.63GET: 8410.79GET: 8479.79GET: 8507.00GET: 8524.17GET: 8522.49GET: 8510.92GET: 8519.28GET: 8539.59GET: 8596.60GET: 8585.75GET: 8584.98GET: 8569.78GET: 8565.69GET: 8580.46GET: 8579.89GET: 8595.38GET: 8587.24GET: 8573.19GET: 8557.15GET: 8545.84GET: 8546.35GET: 8574.13GET: 8575.58GET: 8586.95GET: 8585.98GET: 8589.07GET: 8587.16GET: 8585.81GET: 8579.32GET: 8567.77GET: 8562.51GET: 8565.94GET: 8581.48GET: 8578.03GET: 8582.27GET: 8586.40GET: 8578.99GET: 8585.41GET: 8581.64====== GET ======
-  100000 requests completed in 11.66 seconds
-  25 parallel clients
-  3 bytes payload
-  keep alive: 1
-
-0.00% <= 1 milliseconds
-2.33% <= 2 milliseconds
-62.72% <= 3 milliseconds
-96.18% <= 4 milliseconds
-99.70% <= 5 milliseconds
-99.83% <= 6 milliseconds
-99.84% <= 7 milliseconds
-99.92% <= 8 milliseconds
-99.95% <= 9 milliseconds
-99.96% <= 10 milliseconds
-99.98% <= 11 milliseconds
-99.98% <= 12 milliseconds
-99.99% <= 14 milliseconds
-99.99% <= 15 milliseconds
-99.99% <= 16 milliseconds
-99.99% <= 17 milliseconds
-99.99% <= 18 milliseconds
-99.99% <= 19 milliseconds
-99.99% <= 21 milliseconds
-99.99% <= 22 milliseconds
-99.99% <= 24 milliseconds
-99.99% <= 25 milliseconds
-100.00% <= 26 milliseconds
-100.00% <= 28 milliseconds
-100.00% <= 30 milliseconds
-100.00% <= 31 milliseconds
-100.00% <= 32 milliseconds
-8578.54 requests per second
-
-GET: 6323.08GET: 7815.87GET: 8051.33GET: 8188.96GET: 8217.84GET: 8245.63GET: 8226.84GET: 8241.32GET: 8246.00GET: 8309.29GET: 8285.77GET: 8242.63GET: 8233.61GET: 8268.17GET: 8267.32GET: 8259.76GET: 8266.17GET: 8262.34GET: 8265.94GET: 8247.97GET: 8242.65GET: 8248.17GET: 8244.56GET: 8244.88GET: 8219.46GET: 8219.79GET: 8201.83GET: 8203.52GET: 8198.30GET: 8195.08GET: 8194.45GET: 8189.38GET: 8179.42
