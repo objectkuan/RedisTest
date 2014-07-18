@@ -1,2 +1,3 @@
-*/result*/*
+client/redis/results/
+server/redis/results/
 server/redis/appendonly/
