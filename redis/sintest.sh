@@ -119,7 +119,7 @@ function start_test() {
 
 		# [1]
 		info "Start setting up server NIC"
-		rserver_call "$SERVER_DIR/setuprss.sh -n $INSNUM -t $NTUPLE -f $RFS_ENABLED -p $RPS_ENABLED"
+		rserver_call "$SERVER_DIR/setuprss.sh -n $INSNUM -t $NTUPLE -r $NTRULE -f $RFS_ENABLED -p $RPS_ENABLED"
 		#ssh -T $RSERVER bash $SERVER_DIR/setuprss.sh -n $INSNUM #> /dev/null 2>&1
 		info "Finish setting up server NIC"
 

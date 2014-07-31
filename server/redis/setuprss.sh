@@ -12,13 +12,15 @@ IFACE="eth5"
 RFS_ENABLED=0
 RPS_ENABLED=0
 
-while getopts n:t:f:p:h option
+while getopts n:t:r:f:p:h option
 do
 	case "$option" in
 	n)
 		INSNUM=$OPTARG;;
 	t)
 		NTUPLE=$OPTARG;;
+	r)
+		NTRULE=$OPTARG;;
         f)
 		RFS_ENABLED=$OPTARG;;
         p)
