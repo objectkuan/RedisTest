@@ -70,4 +70,5 @@ done;
 for pid in ${pids[@]}; do
 	wait $pid
 done;
+sleep 10
 echo "Started..."

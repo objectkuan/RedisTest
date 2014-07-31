@@ -39,9 +39,9 @@ rm ./results/* -f
 # Run benchmarks
 for (( i=0; i<$INSNUM; i++ )); do
 	port=${PORT[$i]}
-	./redis-benchmark -h 10.216.26.44 -p $port -t set -n 100000000 -r 10000000000 &
+	./redis-benchmark -h 192.168.0.180 -p $port -t set -n 100000000 -r 10000000000 &
 	pids[${#pids[@]}]=$!
-	echo "./redis-benchmark -h 10.216.26.44 -p $port -t set -n 100000000 -r 10000000000"
+	echo "./redis-benchmark -h 192.168.0.180 -p $port -t set -n 100000000 -r 10000000000"
 done;
 
 for pid in ${pids[@]}; do
