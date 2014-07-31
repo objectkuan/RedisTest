@@ -29,6 +29,8 @@ do
 	esac
 done
 
+echo $INSNUM
+
 # Reset RSS
 cat /etc/modprobe.d/modprobe.conf | grep -v "RSS" > /etc/modprobe.d/tmp
 echo "options ixgbe RSS=$INSNUM,$INSNUM" >> /etc/modprobe.d/tmp
@@ -39,7 +41,7 @@ rmmod ixgbe
 modprobe ixgbe
 sleep 5
 
-$TEST_DIR/nic.sh -i eth6 -p $RPS_ENABLED -f $RFS_ENABLED
+$TEST_DIR/nic.sh -i $IFACE -p $RPS_ENABLED -f $RFS_ENABLED
 
 # Setup NUTPLE
 echo "NTUPLE is $NTUPLE."
