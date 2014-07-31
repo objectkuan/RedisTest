@@ -107,8 +107,10 @@ fi
 
 RFS_ENABLED=0
 RPS_ENABLED=0
+XPS_ENABLED=0
+INTR_AFF=1
 
-while getopts i:f:p:h option
+while getopts i:f:p:x:h option
 do
     case "$option" in
         i)
@@ -117,6 +119,8 @@ do
 	    RFS_ENABLED=$OPTARG;;
 	p)
 	    RPS_ENABLED=$OPTARG;;
+	x)
+	    XPS_ENABLED=$OPTARG;;
         h|\?)
 	    print_usage;;
     esac
@@ -171,12 +175,14 @@ info_msg "    Interrupt throttle rate: 3000"
 
 # Use XPS to set affinities of Tx queues
 # Note: This is only done when we have more Tx queues than cores.
-#if [[ $TX_QUEUES -ge $CORES ]]; then
-#    for i in $(seq 0 $((CORES-1))); do
-#	cpuid_to_mask $((i%CORES)) | xargs -i echo {} > /sys/class/net/$IFACE/queues/tx-$i/xps_cpus
-#    done
-#    info_msg "    XPS enabled"
-#fi
+if [[ ( $TX_QUEUES -ge $CORES ) && ($XPS_ENABLED == 1) ]]; then
+    for i in $(seq 0 $((CORES-1))); do
+	cpuid_to_mask $((i%CORES)) | xargs -i echo {} > /sys/class/net/$IFACE/queues/tx-$i/xps_cpus
+    done
+    info_msg "    XPS enabled"
+else 
+    info_msg "    XPS disabled"
+fi
 
 # Enable RPS if number of cores and hardware cores are not equal
 if [[ (! $HW_QUEUES == $CORES) && ($RPS_ENABLED == 1) ]]; then
@@ -206,11 +212,13 @@ else
 fi
 
 # Set interrupt affinities
-i=0
-intr_list $IFACE $DRIVER | while read irq; do
-    cpuid_to_mask $((i%CORES)) | xargs -i echo {} > /proc/irq/$irq/smp_affinity
-    i=$((i+1))
-done
+if [ $INTR_AFF -eq 1 ]; then
+	i=0
+	intr_list $IFACE $DRIVER | while read irq; do
+	    cpuid_to_mask $((i%CORES)) | xargs -i echo {} > /proc/irq/$irq/smp_affinity
+	    i=$((i+1))
+	done
+fi
 
 # Enlarge open file limits
 ulimit -n 65536
@@ -225,10 +233,10 @@ ulimit -n 65536
 #iptables -t raw -A OUTPUT -p udp -j NOTRACK > /dev/null 2>&1
 service iptables stop
 
-if ps aux | grep irqbalance | grep -v grep; then
-    info_msg "Disable irqbalance..."
-    # XXX Do we have a more moderate way to do this?
-    killall irqbalance > /dev/null 2>&1
-fi
+#if ps aux | grep irqbalance | grep -v grep; then
+#    info_msg "Disable irqbalance..."
+#    # XXX Do we have a more moderate way to do this?
+#    killall irqbalance > /dev/null 2>&1
+#fi
 
 info_msg "${GREEN}Fastsocket has successfully configured on $IFACE$NC"
