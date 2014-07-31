@@ -22,6 +22,8 @@ do
     esac
 done
 
+mkdir -p results
+
 if [[ "$OUTPUT" = "" ]]; then
     sar -P ALL -u ALL $INTERVAL $TIME
 #    pids[${#pids[@]}]=$!
