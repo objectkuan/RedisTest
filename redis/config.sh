@@ -2,7 +2,8 @@
 RSERVER="sinatest03"
 RCLIENT="sinatest01"
 RCLIENT2="sinatest05"
-SERVERIP="192.168.0.180"
+#SERVERIP="192.168.0.180"
+SERVERIP="172.24.55.108"
 
 SERVER_DIR="/home/hcho.ho/test/server/redis"
 MEASURE_DIR="/home/hcho.ho/test/server/measures"
@@ -11,11 +12,11 @@ CLIENT2_DIR="/home/hcho.ho/test/client/redis"
 
 measures=("cpu" "throughput")
 
-NTUPLE="on"
+NTUPLE="off"
 RFS_ENABLED=0
 RPS_ENABLED=0
 
-RECORD_TIME=120
+RECORD_TIME=1200
 
 #####################
 # Choose to test

@@ -2,7 +2,7 @@
 
 INSNUM=1
 PARAL=50
-DO_TEST=100
+DO_TEST=1
 JUST_CLEAN=0
 while getopts n:c:t:k option
 do
@@ -90,7 +90,7 @@ function start_test() {
 
 		# [2]
 		info "Start running servers"
-		rserver_call "$SERVER_DIR/start.sh -p 10000 -n $INSNUM"
+		rserver_call "$SERVER_DIR/start.sh -p 10000 -n $INSNUM -f 0"
 		#ssh -T $RSERVER bash $SERVER_DIR/start.sh -p 10000 -n $INSNUM > /dev/null 2>&1
 		pids[${#pids[@]}]=$!
 		info "Finish running servers"
