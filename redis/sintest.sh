@@ -125,7 +125,7 @@ function start_test() {
 
 		# [2]
 		info "Start running servers"
-		rserver_call "$SERVER_DIR/start.sh -p 10000 -n $INSNUM -f 0"
+		rserver_call "$SERVER_DIR/start.sh -p 10000 -n $INSNUM"
 		#ssh -T $RSERVER bash $SERVER_DIR/start.sh -p 10000 -n $INSNUM > /dev/null 2>&1
 		pids[${#pids[@]}]=$!
 		info "Finish running servers"
