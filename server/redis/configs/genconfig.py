@@ -24,6 +24,8 @@ config['appendfilename'] = 'appendonly.aof'
 config['appendonly'] = args.appendonly
 config['appendfsync'] = args.appendfsync
 config['dbfilename'] = 'r' + args.port + ".rdb"
+#config['libredis'] = './libredis.so.2.4.20.3.' + config['port']
+config['libredis'] = './libredis.so.2.4.20.3'
 
 config_file_name = 'config-' + config['port']
 os.system('cat redis.conf.tmpl > ' + config_file_name)

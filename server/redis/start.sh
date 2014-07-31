@@ -48,12 +48,27 @@ rm ./appendonly/libredis* -f
 # Run the instances
 for (( i=0; i<$INSNUM; i++ )); do
 	port=${PORT[$i]}
-	taskset -c $i ./redis-server ./configs/config-$port
-	pids[${#pids[@]}]=$!
-	echo taskset -c $i ./redis-server ./configs/config-$port
+	## nothing
+	#./redis-server ./configs/config-$port &
+	#echo "/redis-server ./configs/config-$port"
+
+	## cgroup
+	cgexec -g cpuset:redis_$(($i+1)) ./redis-server configs/config-$port
+	echo "cgexec -g cpuset:redis_$(($i+1)) ./redis-server configs/config-$port"
+
+	## early
+	#taskset -c $i ./redis-server ./configs/config-$port
+	#echo "taskset -c $i ./redis-server ./configs/config-$port"
+
+	## taskset
+	#./redis-server ./configs/config-$port &
+	#pid=$!
+	#taskset -cp $i $pid
+	#pids[${#pids[@]}]=$!
+	#echo "taskset"
 done;
 for pid in ${pids[@]}; do
 	wait $pid
 done;
 sleep 10
-echo "Done..."
+echo "Started..."

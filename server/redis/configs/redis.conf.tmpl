@@ -4,6 +4,7 @@ daemonize yes
 # appendfilename appendonly6379.aof
 # appendfsync everysec
 # dbfilename r6379.rdb
+# libredis ./libredis.so.2.4.20.3
 timeout 1234567
 logfile /dev/null
 databases 16
@@ -34,4 +35,3 @@ dir ./appendonly
 maxmemory-policy volatile-lru
 cronbgrewrite 0 2 * * *
 cronsave 0 1 * * *
-libredis ./libredis.so.2.4.20.3
