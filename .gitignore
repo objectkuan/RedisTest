@@ -2,4 +2,5 @@ client/redis/results/
 server/redis/results/
 server/measures/results/
 server/redis/appendonly/
+server/redis/configs/config-*
 redis/results/
