@@ -25,7 +25,7 @@ do
 	k)
 		JUST_CLEAN=1;;
 	h)
-		echo "sintest.sh [-n ins_num] [-c para_client] [-w way] [-f fastsocket] [-t do_test] [-k 1]"
+		echo "sintest.sh [-n ins_num] [-c para_client] [-t test] [-w way] [-f fastsocket] [-t do_test] [-k 1]"
 		exit
 	esac
 done;
