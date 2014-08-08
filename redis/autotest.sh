@@ -1,7 +1,7 @@
 #!/bin/sh
 
-CON=(300)
-INS=(1 4 8 12)
+CON=(150 200 300 400 600 800 1000)
+INS=(1 2 4 8 12)
 
 COUNT=0
 FROM=0
@@ -27,7 +27,7 @@ for con in ${CON[@]}; do
 		echo "[ReTest] Start $con concur, $ins instances"
 		echo "[ReTest] ====================================="
 		rm results/$ins-$con* -rf
-		./sintest.sh -n $ins -c $con -t 1
+		./sintest.sh -n $ins -c $con -t 7
 		echo "[ReTest] ====================================="
 	done;
 done;

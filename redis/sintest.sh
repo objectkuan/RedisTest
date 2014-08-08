@@ -7,7 +7,9 @@ INSNUM=1
 PARAL=50
 DO_TEST=1
 JUST_CLEAN=0
-while getopts n:c:t:k option
+WAY=0
+FASTSOCKET=0
+while getopts n:c:t:w:f:k:h option
 do
 	case "$option" in
 	n)
@@ -16,8 +18,15 @@ do
 		PARAL=$OPTARG;;
 	t)
 		DO_TEST=$OPTARG;;
+	w)
+		WAY=$OPTARG;;
+	f)
+		FASTSOCKET=$OPTARG;;
 	k)
 		JUST_CLEAN=1;;
+	h)
+		echo "sintest.sh [-n ins_num] [-c para_client] [-w way] [-f fastsocket] [-t do_test] [-k 1]"
+		exit
 	esac
 done;
 
@@ -58,9 +67,9 @@ function rclient2_call() {
 # Functions to kill remote processes
 ##########################################
 function cleanup_all() {
-	info "Killing remote processes.."
+	info "Killing all remote processes.."
 	for (( i=0; i<3; i++)); do
-		rclient_call "$CLIENT_DIR/killall.sh" /dev/null 2>&1 &
+		rclient_call "$CLIENT_DIR/killall.sh" > /dev/null 2>&1 &
 		rclient2_call "$CLIENT2_DIR/killall.sh" > /dev/null 2>&1 &
 		rserver_call "$SERVER_DIR/killall.sh" > /dev/null 2>&1 &
 		rserver_call "$MEASURE_DIR/killall.sh" > /dev/null 2>&1 &
@@ -70,7 +79,7 @@ function cleanup_all() {
 		#ssh -T $RSERVER bash $MEASURE_DIR/killall.sh > /dev/null 2>&1 &
 		sleep 1
 	done;
-	info "Remote processes killed.."
+	info "All remote processes killed.."
 }
 function cleanup_server() {
 	info "Killing remote server processes.."
@@ -125,7 +134,7 @@ function start_test() {
 
 		# [2]
 		info "Start running servers"
-		rserver_call "$SERVER_DIR/start.sh -p 10000 -n $INSNUM"
+		rserver_call "$SERVER_DIR/start.sh -p 10000 -n $INSNUM -w $WAY -f $FASTSOCKET"
 		#ssh -T $RSERVER bash $SERVER_DIR/start.sh -p 10000 -n $INSNUM > /dev/null 2>&1
 		pids[${#pids[@]}]=$!
 		info "Finish running servers"
@@ -143,6 +152,7 @@ function start_test() {
 		# [5]
 		info "Start starting measures"
 		for measure in ${measures[@]}; do
+			info "   $measur"
 			rserver_call_d "$MEASURE_DIR/measure-$measure.sh -o measure-$measure.dat"
 			#ssh -T $RSERVER bash $MEASURE_DIR/measure-$measure.sh -o measure-$measure.dat > /dev/null 2>&1 &
 		done;

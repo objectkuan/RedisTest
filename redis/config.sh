@@ -10,8 +10,8 @@ MEASURE_DIR="/home/hcho.ho/test/server/measures"
 CLIENT_DIR="/home/hcho.ho/test/client/redis"
 CLIENT2_DIR="/home/hcho.ho/test/client/redis"
 
-#measures=("llc")
-measures=("cpu" "throughput" "llc")
+measures=("cpu" "throughput")
+#measures=("cpu" "throughput" "llc")
 
 
 NTUPLE="off"
@@ -19,7 +19,7 @@ NTRULE=0
 RFS_ENABLED=0
 RPS_ENABLED=0
 
-RECORD_TIME=12000
+RECORD_TIME=180
 
 #####################
 # Choose to test
