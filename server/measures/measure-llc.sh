@@ -22,12 +22,12 @@ do
     esac
 done
 
-
+mkdir -p results
+rm results/$OUTPUT > /dev/null 2>&1
 
 if [[ "$OUTPUT" = "" ]]; then
     /root/bin/perf stat -e LLC-loads,LLC-load-misses,LLC-stores,LLC-store-misses,LLC-prefetches,LLC-prefetch-misses -p `pgrep -d',' redis-server`
 else
-    mkdir -p results
     /root/bin/perf stat -e LLC-loads,LLC-load-misses,LLC-stores,LLC-store-misses,LLC-prefetches,LLC-prefetch-misses -p `pgrep -d',' redis-server` > results/$OUTPUT 2>&1
 fi
 

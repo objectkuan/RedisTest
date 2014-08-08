@@ -215,7 +215,7 @@ fi
 if [ $INTR_AFF -eq 1 ]; then
 	i=0
 	intr_list $IFACE $DRIVER | while read irq; do
-	    cpuid_to_mask $((i%CORES)) | xargs -i echo {} > /proc/irq/$irq/smp_affinity
+	cpuid_to_mask $((i%CORES)) | xargs -i echo {} > /proc/irq/$irq/smp_affinity
 	    i=$((i+1))
 	done
 fi
@@ -239,4 +239,5 @@ service iptables stop
 #    killall irqbalance > /dev/null 2>&1
 #fi
 
+ethtool -K eth5 gro off
 info_msg "${GREEN}Fastsocket has successfully configured on $IFACE$NC"

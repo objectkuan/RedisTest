@@ -31,8 +31,6 @@ do
 	esac
 done
 
-echo $INSNUM
-
 # Reset RSS
 cat /etc/modprobe.d/modprobe.conf | grep -v "RSS" > /etc/modprobe.d/tmp
 echo "options ixgbe RSS=$INSNUM,$INSNUM" >> /etc/modprobe.d/tmp

@@ -12,19 +12,19 @@ service cgconfig start
 mkdir /my_cgroup
 mount -t cgroup -o cpuset cpuset /my_cgroup/
 
-mkdir /my_cgroup/base_task
-mkdir /my_cgroup/redis_1
-mkdir /my_cgroup/redis_2
-mkdir /my_cgroup/redis_3
-mkdir /my_cgroup/redis_4
-mkdir /my_cgroup/redis_5
-mkdir /my_cgroup/redis_6
-mkdir /my_cgroup/redis_7
-mkdir /my_cgroup/redis_8
-mkdir /my_cgroup/redis_9
-mkdir /my_cgroup/redis_10
-mkdir /my_cgroup/redis_11
-mkdir /my_cgroup/redis_12
+mkdir /my_cgroup/base_task > /dev/null 2>&1
+mkdir /my_cgroup/redis_1 > /dev/null 2>&1
+mkdir /my_cgroup/redis_2 > /dev/null 2>&1
+mkdir /my_cgroup/redis_3 > /dev/null 2>&1
+mkdir /my_cgroup/redis_4 > /dev/null 2>&1
+mkdir /my_cgroup/redis_5 > /dev/null 2>&1
+mkdir /my_cgroup/redis_6 > /dev/null 2>&1
+mkdir /my_cgroup/redis_7 > /dev/null 2>&1
+mkdir /my_cgroup/redis_8 > /dev/null 2>&1
+mkdir /my_cgroup/redis_9 > /dev/null 2>&1
+mkdir /my_cgroup/redis_10 > /dev/null 2>&1
+mkdir /my_cgroup/redis_11 > /dev/null 2>&1
+mkdir /my_cgroup/redis_12 > /dev/null 2>&1
 
 echo 0 > /my_cgroup/base_task/cpuset.cpus
 echo 0 > /my_cgroup/base_task/cpuset.mems

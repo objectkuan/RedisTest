@@ -23,6 +23,7 @@ do
 done
 
 mkdir -p results
+rm results/$OUTPUT > /dev/null 2>&1
 
 if [[ "$OUTPUT" = "" ]]; then
     sar -P ALL -u ALL $INTERVAL $TIME
